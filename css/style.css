@@ -1,0 +1,143 @@
+*{
+	font-family: "Open Sans", sans-serif;
+}
+body{
+	padding-top: 2.1em;
+	background: #f3f3f3;
+}
+
+h1{
+	color: white;
+}
+
+p{	
+	padding: .5em;
+	text-align: justify;
+}
+
+.pure-menu-heading{
+	color: #f3f3f3;
+	text-transform: inherit;
+}
+
+.pure-menu-item > .pure-menu-link{
+	color: #f3f3f3;
+
+}
+
+.pure-menu-link:hover, .pure-menu-link:active,.pure-menu-link:focus{
+	background: #565d64;
+
+}
+
+.splash-container{
+	width: 100%;
+	height: 45em;
+	background: #333;  	
+	background-size: cover;
+	background-position: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	  -ms-flex-direction: column;
+	      flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	  -ms-flex-pack: center;
+	      justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	  -ms-flex-align: center;
+	      align-items: center;
+	text-align: center;
+
+}
+
+.splash {
+	font-size: 150%;
+	color: #f3f3f3;	
+	font-weight: 100;
+}
+.splash-title{
+	border: 3px solid #f3f3f3;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 1em 1.5em;
+	margin-bottom: 0;
+}
+.splash-subtitle{
+	background:#f3f3f3; 
+	color:#216265;
+	padding: 15px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
+/*CONTENT*/
+
+/*News*/
+.pub-date{
+	margin: 0;
+	margin-left: 1em;
+	padding: 0;
+	display: inline;
+	list-style: none;
+}
+.pub-date > .month, .num-day{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+.num-day{
+	font-size: 1.8em;
+ }
+
+/*JOBS*/
+.article{
+	margin-bottom: 1em;
+}
+p, h3, .tags{
+	margin:0;
+	padding: 0 16px 0 16px;
+}
+.tags{
+	margin-bottom: 1em;
+}
+
+.main-content{	
+	margin: 0 auto;
+	background: #f3f3f3;
+	max-width: 1104px;
+}
+
+.column-title{
+	text-align: center;
+	color: #216265;
+}
+
+
+div > a{
+	color: #888;
+}
+
+i{
+	color: #216265;
+}
+.imgs{	
+	background: url(https://38.media.tumblr.com/651dfaed378e9a1f780f50cad8ef7ed1/tumblr_mkneytF4mQ1rsdpaso1_500.gif) no-repeat;
+	height: 300px;
+	margin: 0 auto;	
+	background-position: center;
+}
+
+footer {
+    
+}
+
+
+
