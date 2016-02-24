@@ -1,18 +1,21 @@
+var canvas = document.querySelector('canvas'),
+      ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 var canvasDots = function() {
-  var canvas = document.querySelector('canvas'),
-      ctx = canvas.getContext('2d'),
-      colorDot = '#00A555',
+  
+     var colorDot = '#00A555',
       color = '#00A555';
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  canvas.style.display = 'block';
   ctx.fillStyle = colorDot;
-  ctx.lineWidth = .1;
+  ctx.lineWidth = .2;
   ctx.strokeStyle = color;
 
   var mousePosition = {
     x: 30 * canvas.width / 100,
     y: 30 * canvas.height / 100
+
+
   };
 
   var dots = {
@@ -29,7 +32,7 @@ var canvasDots = function() {
     this.vx = -.5 + Math.random();
     this.vy = -.5 + Math.random();
 
-    this.radius = Math.random();
+    this.radius = (Math.random() * 2)+.3;
   }
 
   Dot.prototype = {
@@ -87,7 +90,7 @@ var canvasDots = function() {
     }
 
     dot.line();
-    dot.animate();
+    dot.animate();  
   }
 
   window.onmousemove = function(parameter) {
@@ -105,4 +108,6 @@ window.onload = function() {
   canvasDots();
 };
 
-
+function reload(){
+  window.onresize = location.reload();
+};
