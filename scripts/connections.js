@@ -1,15 +1,15 @@
-var canvas = document.querySelector('canvas'),
-      ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
-var canvasDots = function() {
-  
-     var colorDot = '#00A555',
-      color = '#00A555';
-  ctx.fillStyle = colorDot;
-  ctx.lineWidth = .2;
-  ctx.strokeStyle = color;
+var canvasDots = function() { 
+    var canvas = document.querySelector('canvas'),
+    ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    var colorDot = '#00A555',
+    color = '#00A555';
+    ctx.fillStyle = colorDot;
+    ctx.lineWidth = .2;
+    ctx.strokeStyle = color;
 
   var mousePosition = {
     x: 30 * canvas.width / 100,
@@ -19,9 +19,11 @@ var canvasDots = function() {
   };
 
   var dots = {
-    nb: 350,
-    distance: 60,
-    d_radius: 100,
+    //numero di punti di default
+    // nb: 350,
+    nb: canvas.width / 5, // Numero di punti
+    distance: 60, // Numero di connessioni
+    d_radius: 100, // Distanza delle connessioni
     array: []
   };
 
@@ -81,6 +83,24 @@ var canvasDots = function() {
   };
 
   function createDots(){
+    window.addEventListener('resize', function(){   
+        var width         = window.innerWidth;
+        var height        = window.innerHeight;
+        var pixelDensity  = window.devicePixelRatio || 1;
+        
+        canvas.setAttribute('width', width * pixelDensity);
+        canvas.setAttribute('height', height * pixelDensity);
+
+        // canvas.style.width = width + "px";
+        // canvas.style.height = height + "px";
+
+        var colorDot = '#00A555',
+        color = '#00A555';
+        ctx.fillStyle = colorDot;
+        ctx.lineWidth = .2;
+        ctx.strokeStyle = color;
+
+    });
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(i = 0; i < dots.nb; i++){
       dots.array.push(new Dot());
@@ -101,13 +121,15 @@ var canvasDots = function() {
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 
-  setInterval(createDots, 1000/30); 
+  setInterval(createDots, 1000/30);
+  // 60fps
+  // setInterval(createDots, 1000/60); 
 };
 
 window.onload = function() {
-  canvasDots();
+  canvasDots();  
 };
 
-function reload(){
-  window.onresize = location.reload();
-};
+// function reload(){
+//   window.onresize = location.reload();
+// };
