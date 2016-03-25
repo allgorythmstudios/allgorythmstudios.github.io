@@ -109,10 +109,10 @@ var canvasDots = function() {
 
   function createDots(){
 
-   // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-   //    alert('Mobile');
-   //  }     
-   // else{   
+   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      alert('Mobile');
+    }     
+   else{   
       window.addEventListener('resize', function(){   
           var width         = window.innerWidth;
           var height        = window.innerHeight;
@@ -140,7 +140,7 @@ var canvasDots = function() {
           }
 
       });
-    // }
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     
