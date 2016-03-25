@@ -109,11 +109,12 @@ var canvasDots = function() {
 
   function createDots(){
 
-   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      alert('Mobile');
-    }     
-   else{   
-      window.addEventListener('resize', function(){   
+   
+    window.addEventListener('resize', function(){   
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      
+      }     
+      else{  
           var width         = window.innerWidth;
           var height        = window.innerHeight;
           var pixelDensity  = window.devicePixelRatio || 1;
@@ -138,9 +139,9 @@ var canvasDots = function() {
           for(i = dots.nb; i >0; i--){
             dots.array.pop();
           }
-
-      });
-    }
+        }   
+        });
+    
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     
