@@ -1,9 +1,36 @@
+// var isMobile = {
+//   Android: function(){
+//     return navigator.userAgent.match(/Android/i);
+//   },
+//   BlackBerry: function(){ 
+//     return navigator.userAgent.match(/BlackBerry/i);
+//   },
+//   iOS: function(){
+//     return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+//   },
+//   Opera: function(){
+//     return navigator.userAgent.match(/Opera Mini/i);
+//   },
+//   Windows: function(){
+//     return navigator.userAgent.match(/IEMobile/i);
+//   },
+//   any: function(){
+//     return ( isMobile.Android() || isMobile.BlackBerry() 
+//              || isMobile.iOS()  || isMobile.Opera()
+//              || isMobile.Windows());
+//   }
+// }
+
+
 
 var canvasDots = function() { 
     var canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    var pixelDensity  = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * pixelDensity;
+    canvas.height = window.innerHeight * pixelDensity;
     
     var colorDot = '#00A555',
     color = '#00A555';
@@ -14,8 +41,6 @@ var canvasDots = function() {
   var mousePosition = {
     x: 30 * canvas.width / 100,
     y: 30 * canvas.height / 100
-
-
   };
 
   var dots = {
@@ -83,25 +108,44 @@ var canvasDots = function() {
   };
 
   function createDots(){
-    window.addEventListener('resize', function(){   
-        var width         = window.innerWidth;
-        var height        = window.innerHeight;
-        var pixelDensity  = window.devicePixelRatio || 1;
-        
-        canvas.setAttribute('width', width * pixelDensity);
-        canvas.setAttribute('height', height * pixelDensity);
 
-        // canvas.style.width = width + "px";
-        // canvas.style.height = height + "px";
+   // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   //    alert('Mobile');
+   //  }     
+   // else{   
+      window.addEventListener('resize', function(){   
+          var width         = window.innerWidth;
+          var height        = window.innerHeight;
+          var pixelDensity  = window.devicePixelRatio || 1;
+          
+          // canvas.setAttribute('width', width * pixelDensity);
+          // canvas.setAttribute('height', height * pixelDensity);
 
-        var colorDot = '#00A555',
-        color = '#00A555';
-        ctx.fillStyle = colorDot;
-        ctx.lineWidth = .2;
-        ctx.strokeStyle = color;
+          // canvas.style.width = width + "px";
+          // canvas.style.height = height + "px";
 
-    });
+
+          canvas.width = width * pixelDensity;
+          canvas.height = height * pixelDensity;
+
+          var colorDot = '#00A555',
+          color = '#00A555';
+          ctx.fillStyle = colorDot;
+          ctx.lineWidth = .2;
+          ctx.strokeStyle = color;
+
+
+          for(i = dots.nb; i >0; i--){
+            dots.array.pop();
+          }
+
+      });
+    // }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    
+
+    
     for(i = 0; i < dots.nb; i++){
       dots.array.push(new Dot());
       dot = dots.array[i];
@@ -121,9 +165,9 @@ var canvasDots = function() {
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 
-  setInterval(createDots, 1000/30);
+  //setInterval(createDots, 1000/30);
   // 60fps
-  // setInterval(createDots, 1000/60); 
+  setInterval(createDots, 1000/60); 
 };
 
 window.onload = function() {
