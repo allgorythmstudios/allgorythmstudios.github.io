@@ -26,11 +26,9 @@
 var canvasDots = function() { 
     var canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d');
-    // canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight;
-    var pixelDensity  = window.devicePixelRatio || 1;
-    canvas.width = window.innerWidth * pixelDensity;
-    canvas.height = window.innerHeight * pixelDensity;
+  
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     
     var colorDot = '#00A555',
     color = '#00A555';
