@@ -1,34 +1,9 @@
-// var isMobile = {
-//   Android: function(){
-//     return navigator.userAgent.match(/Android/i);
-//   },
-//   BlackBerry: function(){ 
-//     return navigator.userAgent.match(/BlackBerry/i);
-//   },
-//   iOS: function(){
-//     return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-//   },
-//   Opera: function(){
-//     return navigator.userAgent.match(/Opera Mini/i);
-//   },
-//   Windows: function(){
-//     return navigator.userAgent.match(/IEMobile/i);
-//   },
-//   any: function(){
-//     return ( isMobile.Android() || isMobile.BlackBerry() 
-//              || isMobile.iOS()  || isMobile.Opera()
-//              || isMobile.Windows());
-//   }
-// }
-
-
-
 var canvasDots = function() { 
     var canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d');
   
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = 720; //altezza del canvas 720 = 45 em( altezza della sezione )*16px vallore di 1 em
     
     var colorDot = '#00A555',
     color = '#00A555';
@@ -114,15 +89,8 @@ var canvasDots = function() {
       }     
       else{  
           var width         = window.innerWidth;
-          var height        = window.innerHeight;
+          var height        = 720;
           var pixelDensity  = window.devicePixelRatio || 1;
-          
-          // canvas.setAttribute('width', width * pixelDensity);
-          // canvas.setAttribute('height', height * pixelDensity);
-
-          // canvas.style.width = width + "px";
-          // canvas.style.height = height + "px";
-
 
           canvas.width = width * pixelDensity;
           canvas.height = height * pixelDensity;
@@ -133,6 +101,8 @@ var canvasDots = function() {
           ctx.lineWidth = .2;
           ctx.strokeStyle = color;
 
+          dots.nb = canvas.width / 5;
+          console.log(dots.nb);
 
           for(i = dots.nb; i >0; i--){
             dots.array.pop();
@@ -141,10 +111,6 @@ var canvasDots = function() {
         });
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    
-
-    
     for(i = 0; i < dots.nb; i++){
       dots.array.push(new Dot());
       dot = dots.array[i];
@@ -164,9 +130,9 @@ var canvasDots = function() {
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;
 
-  //setInterval(createDots, 1000/30);
+  setInterval(createDots, 1000/30);
   // 60fps
-  setInterval(createDots, 1000/60); 
+  // setInterval(createDots, 1000/60); 
 };
 
 window.onload = function() {

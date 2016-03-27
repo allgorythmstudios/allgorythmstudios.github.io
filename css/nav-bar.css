@@ -5,7 +5,7 @@
     background-color: #333;
     margin-bottom: 1em;
     -webkit-font-smoothing: antialiased;
-    height: 2.1em;
+    height: 2.5em;
     overflow: hidden;
     z-index: 3;
     -webkit-transition: height 0.5s;
@@ -15,7 +15,8 @@
 }
 
 .custom-wrapper.open {
-    height: 14em;
+    /*height: 14em;*/
+    height: 15em;
 }
 
 .custom-menu-3 {
