@@ -5,7 +5,7 @@
     background-color: #333;
     margin-bottom: 1em;
     -webkit-font-smoothing: antialiased;
-    height: 2.5em;
+    height: 2em;
     overflow: hidden;
     z-index: 3;
     -webkit-transition: height 0.5s;
@@ -80,4 +80,8 @@
         display: block;
     }
 
+}
+
+.logo-img{    
+    width: 7em;
 }
