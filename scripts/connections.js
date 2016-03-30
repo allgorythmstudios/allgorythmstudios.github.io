@@ -84,31 +84,29 @@ var canvasDots = function() {
 
    
     window.addEventListener('resize', function(){   
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       
-      }     
-      else{  
-          var width         = window.innerWidth;
-          var height        = 720;
-          var pixelDensity  = window.devicePixelRatio || 1;
+      // } 
+      var width         = window.innerWidth;
+      var height        = 720;
+      var pixelDensity  = window.devicePixelRatio || 1;
 
-          canvas.width = width * pixelDensity;
-          canvas.height = height * pixelDensity;
+      canvas.width = width * pixelDensity;
+      canvas.height = height * pixelDensity;
 
-          var colorDot = '#00A555',
-          color = '#00A555';
-          ctx.fillStyle = colorDot;
-          ctx.lineWidth = .2;
-          ctx.strokeStyle = color;
+      var colorDot = '#00A555',
+      color = '#00A555';
+      ctx.fillStyle = colorDot;
+      ctx.lineWidth = .2;
+      ctx.strokeStyle = color;
 
-          dots.nb = canvas.width / 5;
-          console.log(dots.nb);
+      dots.nb = canvas.width / 5;
+      console.log(dots.nb);
 
-          for(i = dots.nb; i >0; i--){
-            dots.array.pop();
-          }
-        }   
-        });
+      for(i = dots.nb; i >0; i--){
+        dots.array.pop();
+      }         
+    });
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(i = 0; i < dots.nb; i++){
