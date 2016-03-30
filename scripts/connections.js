@@ -89,10 +89,10 @@ var canvasDots = function() {
       // } 
       var width         = window.innerWidth;
       var height        = 720;
-      var pixelDensity  = window.devicePixelRatio || 1;
+      // var pixelDensity  = window.devicePixelRatio || 1;
 
-      canvas.width = width * pixelDensity;
-      canvas.height = height * pixelDensity;
+      canvas.width = width;
+      canvas.height = height;
 
       var colorDot = '#00A555',
       color = '#00A555';
