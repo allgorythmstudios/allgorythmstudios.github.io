@@ -4,7 +4,7 @@ var canvasDots = function() {
   
     canvas.width = window.innerWidth;
     canvas.height = 720; //altezza del canvas 720 = 45 em( altezza della sezione )*16px vallore di 1 em
-        
+    
     var colorDot = '#00A555',
     color = '#00A555';
     ctx.fillStyle = colorDot;
@@ -82,20 +82,21 @@ var canvasDots = function() {
 
   function createDots(){
 
-    
+   
     window.addEventListener('resize', function(){   
-      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       
-      }      
-      else
-      {     
+      // }       
+      
+      if(canvas.width != window.innerWidth)
+      {
         var width         = window.innerWidth;
         var height        = 720;
-        var pixelDensity  = window.devicePixelRatio || 1;
+        // var pixelDensity  = window.devicePixelRatio || 1;
 
-        canvas.width = width * pixelDensity;
-        canvas.height = height * pixelDensity;
-        
+        canvas.width = width;
+        canvas.height = height;
+
         colorDot = '#00A555';
         color = '#00A555';
         ctx.fillStyle = colorDot;
@@ -103,13 +104,13 @@ var canvasDots = function() {
         ctx.strokeStyle = color;
 
         dots.nb = canvas.width / 5;
+        console.log(dots.nb);
 
-        for(i = dots.nb; i > 0; i--){
-          dots.array.pop();          
+        for(i = dots.nb; i >0; i--){
+          dots.array.pop();
         }         
-       }
+      }
     });
-    
     
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(i = 0; i < dots.nb; i++){
