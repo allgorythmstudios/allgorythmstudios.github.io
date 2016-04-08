@@ -11,28 +11,14 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/nav-bar.css">
 	<link rel="stylesheet" href="css/connections.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 <body>
-	<div class="custom-wrapper pure-g" id="menu">
-	    <div class="pure-u-1 pure-u-md-1-2">
-	        <div class="pure-menu">
-	            <a href="#" class="pure-menu-heading custom-brand"><img src="img/logo-allgorhythm.svg" alt="" class="logo-img"></a>
-	            <div class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></div>
-	        </div>
-	    </div>
-	    <div class="pure-u-1 pure-u-md-1-2">
-	        <div class="pure-menu pure-menu-horizontal custom-menu-3 custom-can-transform">
-	            <ul class="pure-menu-list">
-	                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Game</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Jobs</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-	            </ul>
-	        </div>
-	    </div>    
-	</div>
+	<?php 
+		include_once "nav-bar.php";
+		current_page("Home");
+	?>
+
 	<section class="splash-container">	
 	<div class="splash-filter"></div>
 		<div class="splash">			
@@ -146,8 +132,7 @@
 			</div>		
 		</div>
 	</section>
-	<footer>
-		
+	<footer>		
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/nav-bar.js"></script>

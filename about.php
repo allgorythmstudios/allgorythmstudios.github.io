@@ -8,27 +8,16 @@
 	<link rel="stylesheet" href="pure-release-0.6.0/grids-responsive-min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/nav-bar.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>	
-	<div class="pure-g nav-bar">
-		<div class="pure-u-2-5">
-			<a href="#" class="pure-menu-heading">AllGoRythm</a>
-		</div>
-		<div class="pure-u-3-5">
-			<div class="pure-menu pure-menu-horizontal div-right">
-				<ul class="pure-menu-list nav-ul">
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Game</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Jobs</a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<body>
+	<?php 
+		include_once "nav-bar.php";
+		current_page("About");
+	?>
 
 
 	<section class="splash-container">

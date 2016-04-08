@@ -2,15 +2,16 @@
 	font-family: "Open Sans", sans-serif;
 	z-index: 2;
 }
+
 body{
 	padding-top: 2em;
 	background: #f3f3f3;
 }
+
 @font-face{
 	font-family: 'Polya';
 	src: url('../fonts/POLYA.otf');
 }
-
 
 h1{
 	font-family: 'Polya';
@@ -37,6 +38,12 @@ p{
 
 .pure-menu-item > .pure-menu-link:hover, .pure-menu-link:active,.pure-menu-link:focus{
 	background: #333;
+	color:#00A555;
+	/*border-bottom: 2px solid #00A555;*/
+}
+
+.pure-menu-item > .menu-link-active{
+	
 	color:#00A555;
 	/*border-bottom: 2px solid #00A555;*/
 }
