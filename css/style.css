@@ -13,7 +13,7 @@ body{
 	src: url('../fonts/POLYA.otf');
 }
 
-h1{
+.splash-title{
 	font-family: 'Polya';
 	color: #ccc;
 	font-weight: 100;
@@ -63,20 +63,20 @@ p{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: flex;
+		display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: column;
-	  -ms-flex-direction: column;
-	      flex-direction: column;
+	-ms-flex-direction: column;
+		flex-direction: column;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	  -ms-flex-pack: center;
-	      justify-content: center;
+	-ms-flex-pack: center;
+		justify-content: center;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	  -ms-flex-align: center;
-	      align-items: center;
+	-ms-flex-align: center;
+		align-items: center;
 	text-align: center;
 }
 
@@ -133,7 +133,7 @@ p{
 	
 }
 
-.pub-info > .pub-autor{
+.pub-info > .pub-author{
 	color:red;
 }
 
@@ -195,7 +195,8 @@ p, .article-title, .tags, .article-image{
 }
 
 footer {
-	margin-top: 2em;
+	margin-top: 2.5em;
+	padding-top: 2.5em;
 	position: relative;
 	height: 50px;
 	background: #333;    

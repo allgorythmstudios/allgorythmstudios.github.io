@@ -53,7 +53,7 @@
 							<li class="month">Feb</li>
 							<li class="num-day">4</li>
 							<li class="year">2016</li>
-							<li class="pub-autor">by Gordorn Freeman</li>
+							<li class="pub-author">by Gordorn Freeman</li>
 						</ul>
 						
 						<div class="tags">
@@ -74,7 +74,7 @@
 							<li class="month">Feb</li>
 							<li class="num-day">4</li>
 							<li class="year">2016</li>
-							<li class="pub-autor">by Gordorn Freeman</li>
+							<li class="pub-author">by Gordorn Freeman</li>
 						</ul>
 						
 						<div class="tags">
