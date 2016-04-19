@@ -1,0 +1,154 @@
+body{
+	background: #F3f3f3;
+	color:#333;
+	margin: 0;			
+}
+::selection {/* WebKit/Blink Browsers */
+  background: #162955; 
+  color: #f3f3f3;
+}
+::-moz-selection {
+  background: #162955; /* Gecko Browsers */
+  color: #f3f3f3;
+}
+.splash-container{
+	width: 100%;
+	height: 400px;
+	border-bottom: 3px solid #162955;
+	/*
+	Image Source - https://www.flickr.com/photos/bagogames/13944710577
+	Rights to: Zenimax Media Inc
+	*/
+	background: url(../img/overlife.jpg) no-repeat; 
+	background-size: cover;
+	
+	background-position: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+		display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+		flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+		justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+		align-items: center;
+	text-align: center;
+}
+
+h1{
+	background: #f3f3f3;
+	color: #555;
+	font-size: 300%;
+	padding: 1em;
+	/*border:5px solid #2973E8;*/
+}
+h2{
+	background: #162955;
+	margin-top: 0;
+	padding: 2%;
+	color:#f3f3f3;
+	
+}
+
+form{
+	text-align: center;
+	/*max-width: 65%;*/
+	margin:0 auto;
+
+}
+label{
+	font-size: 1.2em; 
+}
+.label-voto{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+select{
+	height: auto;
+	font-size: 2em;
+	height: 50px;
+	width: 100%;
+	background: #162955;
+	border: none;
+	color:#f3f3f3;
+/*	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;*/
+    padding: 0 0 0 50%;
+}
+
+option{
+	/*background: #0A79BA;*/
+	background: #162955;
+	font-size: 1em;
+}
+.voto-videogioco{
+	background: #162955;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	border: none;
+	font-size: 2em;
+	font-weight: bold;
+
+
+}
+
+.oculus-container{
+	margin:0;
+	height: 30vh;
+	min-height: 150px;
+	width: 100%;
+	background: #f3f3f3;
+	text-align: center;
+}
+.oculus-logo{
+	margin-top:10vh; /*altezza immagine: 95px metta altezza 47px*/
+	max-width: 80%;
+}
+.text-blue{
+	color: #162955;
+}
+.background-blue{
+	background: #162955;
+}
+.stars-rating{
+	margin:0 auto;
+	display: inline-block;
+	text-align: left;
+}
+.rating-container{
+	margin:0 auto;
+	text-align: left;
+	max-width: 400px;
+}
+.div-bottom-border{
+	border-bottom:3px solid #162955;
+	padding-top:2em;
+	padding-bottom:2em;
+}
+
+textarea{
+	color:#333;
+	min-width: 90%;
+	min-height: 5em;
+	resize: none;
+
+	border:2px solid #162955;
+}
+.textarea-hide{
+	display: none;
+}
+.textarea-show{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inherit;
+}

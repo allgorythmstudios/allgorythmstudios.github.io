@@ -199,7 +199,8 @@ footer {
 	padding-top: 2.5em;
 	position: relative;
 	height: 50px;
-	background: #333;    
+	/*background: #333;*/
+	background: url(../img/congruent_outline.png); 
 }
 
 .disable-select {

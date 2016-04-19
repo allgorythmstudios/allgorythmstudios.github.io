@@ -1,0 +1,7 @@
+MySQL
+
+CREATE TABLE `questionnaire`.`Users` ( `id` INT NOT NULL AUTO_INCREMENT , `email` VARCHAR(255) NOT NULL , `subscriber` BOOLEAN NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+
+ALTER TABLE `Users` ADD `id` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`id`);
